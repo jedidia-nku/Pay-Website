@@ -2,7 +2,6 @@
 const User = require("../../models/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const message = require("../../../../Echo/server_side/models/message");
 
 const login = async (req, res) => {
     const { email, password } = req.body;
@@ -38,7 +37,7 @@ const login = async (req, res) => {
             userId: user._id,
             email: user.email
         }
-        const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: "14d" });
+        const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: "14d" });
 
         // Return the generated token to the client
         return res.status(200).json({

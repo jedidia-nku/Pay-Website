@@ -5,6 +5,7 @@ const cors = require("cors");
 const dotenv = require("dotenv").config();
 
 const dbConnect = require("./config/mongoDbConfig");
+const AuthRoute = require("./routes/authentication");
 
 const app = express();
 PORT = process.env.PORT || 5050;
@@ -22,7 +23,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 // API Endpoints
-
+app.use("/api/auth", AuthRoute);
 
 // Test route
 app.get("/", (req, res) => {

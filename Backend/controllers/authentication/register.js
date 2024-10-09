@@ -32,6 +32,7 @@ const register = async (req, res) => {
             password: hashedPwd,
             profile_pic
         });
+        await newUser.save();
 
         // Return a response to the client
         return res.status(201).json({
