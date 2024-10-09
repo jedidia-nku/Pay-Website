@@ -6,6 +6,7 @@ import Satisfied from "../assets/Satisfied.png";
 import Benefit from "../assets/Benefit.png";
 import logos from "../assets/logos.png";
 import Security from "../assets/security.png";
+import Globe from "../assets/globe.png"
 import Footer from './Footer';
 
 const HeroSection: React.FC = () => {
@@ -121,7 +122,7 @@ const HeroSection: React.FC = () => {
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Payment possibilities for all</h2>
         <p className="text-lg text-gray-400">
-          SawaPay offers a host of seamless products for individuals, ensuring smooth transactions and efficient money management.
+          PulsePay offers a host of seamless products for individuals, ensuring smooth transactions and efficient money management.
         </p>
       </div>
 
@@ -163,6 +164,42 @@ const HeroSection: React.FC = () => {
       </p>
       <div className="mt-8 flex justify-center">
         <img src={Security} alt="Security Icon" className="w-16 h-16" />
+      </div>
+    </section>
+    
+    <section className="flex flex-col md:flex-row justify-between items-center bg-white text-white py-16 px-52">
+      {/* Left Side: Text Content */}
+      <div className="space-y-6 md:w-1/2">
+        <h1 className="text-4xl font-bold text-gray-900">Our <span className="text-yellow-400">global </span>reach</h1>
+        <div className="space-y-4">
+          <div>
+            <h2 className="text-lg font-semibold text-green-400">30+ Currencies</h2>
+            <p className="text-gray-600">We accept payments in more than thirty currencies.</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-green-400">20M+ API calls</h2>
+            <p className="text-gray-600">API calls per day, peaking at 231 requests per second.</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-green-400">500k+ payments daily</h2>
+            <p className="text-gray-600">Average number of payments processed daily.</p>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-semibold text-green-400">15+ payment options</h2>
+            <p className="text-gray-600">Debit & Credit cards, Mobile money, M-Pesa, Bank Transfer, Bank Account, POS, VISA QR, USSD.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Side: Globe Visualization */}
+      <div className="relative w-80 h-80 md:w-96 md:h-96 mt-10 md:mt-0">
+        {/* Placeholder for globe */}
+        <div className="rounded-full bg-gray-800 w-full h-full">
+          <img src={Globe} alt="Globe image" className="w-full h-full"/>
+        </div>
       </div>
     </section>
 <Footer />
