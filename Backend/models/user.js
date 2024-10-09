@@ -14,6 +14,10 @@ const UserSchema = new Schema({
         required: [true, "Provide your email please"],
         unique: true
     },
+    password: {
+        type: String,
+        required: [true, "Provide your password please"]
+    },
     profile_pic: {
         type: String,
         default: ""
