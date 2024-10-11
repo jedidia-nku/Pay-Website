@@ -1,12 +1,13 @@
 
 const Footer: React.FC = () => {
     return (
+      <>
     <section className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Newsletter Subscription */}
-          <div>
+          <div >
             <h3 className="text-xl font-bold mb-4">Subscribe to our newsletter</h3>
             <p className="mb-4">Join the fast-growing SawaPay and SawaPay community of users.</p>
             <form className="flex items-center space-x-2">
@@ -31,6 +32,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Products Links */}
+          <div className=" flex justify-around">
           <div>
             <h4 className="text-lg font-bold mb-4">Our Products</h4>
             <ul className="space-y-2">
@@ -39,7 +41,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* SawaPay Links */}
           <div>
             <h4 className="text-lg font-bold mb-4">SawaPay</h4>
             <ul className="space-y-2">
@@ -55,6 +56,8 @@ const Footer: React.FC = () => {
               <li><a href="#" className="hover:underline">Privacy</a></li>
               <li><a href="#" className="hover:underline">Help center</a></li>
             </ul>
+          </div>
+          
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-white"><i className="fab fa-facebook"></i></a>
@@ -66,11 +69,18 @@ const Footer: React.FC = () => {
           </div>
         </div>
         {/* Branding */}
-        <div className="text-center mt-12">
-          <span className="text-green-500 text-xl font-bold">PulsePay</span>
+        <div className="text-green-500 text-xl font-bold mt-12">
+          <span className="text-yellow-500">Pulse</span>Pay
         </div>
       </div>
+
     </section>
+          <div className="hidden bg-white lg:h-10 lg:flex lg:gap-12 lg:w-full lg:justify-around lg:text-gray-800">
+          <p>Private Policy</p>
+          <p>2024 PulsePay Inc</p>
+          <p>Copyright 2024 PulsePay, All Rights reserved</p>
+        </div>
+        </>
     )
 }
 

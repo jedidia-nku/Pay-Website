@@ -1,34 +1,34 @@
 // src/components/HeroSection.tsx
 import React from 'react';
-import phone from "../assets/phone.png";
-import business from "../assets/Business.png";
-import Satisfied from "../assets/Satisfied.png";
-import Benefit from "../assets/Benefit.png";
-import logos from "../assets/logos.png";
-import Security from "../assets/security.png";
-import Globe from "../assets/globe.png"
+import phone from "../../public/phone.png";
+import business from "../../public/Business.png";
+import Satisfied from "../../public/Satisfied.png";
+import Benefit from "../../public/Benefit.png";
+import logos from "../../public/logos.png";
+import Security from "../../public/security.png";
+import Globe from "../../public/globe.png"
 import Footer from './Footer';
 
 const HeroSection: React.FC = () => {
   return (
     <>
-    <section className="bg-gray-900 text-white py-48">
+    <section className="bg-gray-900 text-white py-32">
       <div className="container mx-auto flex flex-col lg:flex-row items-center ">
         
         {/* Left Section */}
         <div className="lg:w-1/2 px-6 ">
           <h1 className="text-4xl font-bold">
-            Business payments <span className="text-green-400">for</span> today's global <span className="text-yellow-400">economy</span>
+            Business payments <span className="text-green-500">for</span> today's global <span className="text-yellow-400">economy</span>
           </h1>
           <p className="mt-12 text-lg">
           PulsePay is the Embedded Finance Platform designed for the Gig Economy Workforce and Businesses in Africa. 
             We offer two products such as Payroll Management System to companies and Embedded Financial Services to Gig Workers and Employees across Africa.
           </p>
-          <div className="mt-8">
-            <button className="bg-green-400 text-gray-900 font-semibold py-2 px-4 rounded-md mr-4">
+          <div className="mt-8 flex">
+            <button className="bg-green-500 hover:bg-green-600 text-gray-900 font-semibold py-2 px-4 rounded-md mr-4">
               Contact sales
             </button>
-            <button className="flex items-center bg-gray-700 text-white font-semibold py-2 px-4 rounded-md">
+            <button className="flex items-center bg-gray-700 hover:bg-gray-800 text-white font-semibold py-2 px-4 rounded-md">
               <span>Explore more</span>
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -172,24 +172,37 @@ const HeroSection: React.FC = () => {
       <div className="space-y-6 md:w-1/2">
         <h1 className="text-4xl font-bold text-gray-900">Our <span className="text-yellow-400">global </span>reach</h1>
         <div className="space-y-4">
-          <div>
-            <h2 className="text-lg font-semibold text-green-400">30+ Currencies</h2>
-            <p className="text-gray-600">We accept payments in more than thirty currencies.</p>
-          </div>
+        <div className='flex gap-6'>
+        <div className="w-1 h-12 mt-2 bg-gray-800"></div>
+        <div>
+        <h2 className="text-lg font-semibold text-green-400">30+ Currencies</h2>
+        <p className="text-gray-600">We accept payments in more than thirty currencies.</p>
+        </div>
+      </div>
 
-          <div>
+          <div className='flex gap-6'>
+            <div className="w-1 h-12 mt-2 bg-gray-800"></div>
+            <div>
             <h2 className="text-lg font-semibold text-green-400">20M+ API calls</h2>
             <p className="text-gray-600">API calls per day, peaking at 231 requests per second.</p>
+            </div>
           </div>
 
-          <div>
+            <div className='flex gap-6'>
+            <div className="w-1 h-12 mt-2 bg-gray-800"></div>
+            <div>
             <h2 className="text-lg font-semibold text-green-400">500k+ payments daily</h2>
             <p className="text-gray-600">Average number of payments processed daily.</p>
+            </div>
           </div>
 
-          <div>
+          <div className='flex gap-6'>
+            <div className="w-1.5 h-12 mt-2 bg-gray-800"></div>
+            <div>
             <h2 className="text-lg font-semibold text-green-400">15+ payment options</h2>
             <p className="text-gray-600">Debit & Credit cards, Mobile money, M-Pesa, Bank Transfer, Bank Account, POS, VISA QR, USSD.</p>
+            </div>
+            
           </div>
         </div>
       </div>
