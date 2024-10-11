@@ -93,7 +93,7 @@ const LogIn: React.FC = () => {
                 type="submit"
                 className="w-full text-white ml-2 bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-2 py-1 text-center dark:bg-primary-600  dark:focus:ring-primary-800"
               >
-                SignUp
+                LogIn
               </button>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{' '}

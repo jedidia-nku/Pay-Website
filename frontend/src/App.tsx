@@ -5,7 +5,7 @@ import About from "./Pages/About";
 // import QuickLinksPage from "./Pages/Products";
 import Services from "./Pages/services";
 import LogIn from "./components/login";
-import SignIn from "./components/signin";
+import SignIn from "./components/signUp";
 
 function App() {
   return (
