@@ -19,12 +19,8 @@ const Navbar: React.FC = () => {
 
       {/* Buttons */}
       <div className="flex space-x-4">
-        <button className="border border-green-400 text-green-400 px-6 py-2 rounded-full hover:bg-green-500 hover:text-white hover:text-black transition">
-          Login
-        </button>
-        <button className="bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-600 transition">
-          SignUp
-        </button>
+        <Link to="/LogIn" className="border border-green-400 text-green-400 px-6 py-2 rounded-full hover:bg-green-500 hover:text-white hover:text-black transition">Login</Link>
+        <Link to="/SignUp" className="bg-yellow-500 text-black px-6 py-2 rounded-full hover:bg-yellow-600 transition" >SignUp</Link>
       </div>
     </nav>
   );
