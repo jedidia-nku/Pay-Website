@@ -1,71 +1,59 @@
 # PulsePay
-A platform to send, buy currencies for free.  
 
-- [Project Overview](#project-overview)
+PulsePay is a modern, responsive website for a digital money transfer agency. It provides seamless solutions for services such as money transfer, foreign exchange, air ticketing, hotel reservations, and more.
+
+## Table of Contents
+
+- [About PulsePay](#about-pulsepay)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Environment Variables](#environment-variables)
 - [Usage](#usage)
-- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
 - [License](#license)
 
-## Project Overview
-**Online Event Finder** is a web platform that allows users to create, search, and register for various events. It simplifies the process of finding local or global online events by providing a user-friendly interface where users can register as attendees or organizers. Organizers can create events, upload event images, and manage participant registrations, while attendees can search and register for upcoming events.  
+## About PulsePay
 
-The project includes:
+PulsePay is a user-friendly website designed for agencies offering digital financial services. The website ensures secure and fast transactions for users who wish to transfer money, exchange currency, or book travel services like air and railway tickets, hotel reservations, and car rentals.
 
-- **Frontend**: Built with React for a dynamic user experience.
-- **Backend:** Node.js and Express power the backend, handling all the API requests.
-- **Database**: MongoDB is used to store user information, event details, and registrations.
-- **Authentication**: JWT-based authentication for security, with Google OAuth integration for ease of use.
+## Features
 
-## Key Features
-
-- **User Authentication:** Sign up, log in, and log out with JWT authentication or Google OAuth.
-- **Event Management**: Users can create, update, and delete their own events.
-- **Event Search**: Find events by title using the search bar.
-- **Profile Management**: Users can upload a profile picture and manage their profile information.
-- **Image Upload**: Organizers can upload images for their events.
-- **Event Registration**: Users can register for events and cancel their registration if needed.
+- **Money Transfer**: Send money quickly and securely.
+- **Foreign Exchange**: Exchange foreign currency at the best rates.
+- **Air Ticketing**: Book flights effortlessly.
+- **Railway Ticketing**: Purchase railway tickets with ease.
+- **Hotel Reservation**: Find and reserve accommodations.
+- **Car Hire for Outstation**: Book car rentals for your travels.
 
 ## Technologies Used
 
-### Frontend:
+The PulsePay website is built using modern web technologies:
 
-- React (with React Router)
-- CSS for styling
-- React Icons for icons
+- **Frontend**:
+  - [React (TypeScript)](https://reactjs.org/): For building the user interface.
+  - [Tailwind CSS](https://tailwindcss.com/): For responsive and scalable CSS styling.
 
-### Backend:
-
-- Node.js
-- Express.js
-- MongoDB with Mongoose
-- Multer for image uploads
-- Passport.js and JWT for authentication
-
-### Other Tools:
-
-- Google OAuth for social login
-- SendGrid for sending confirmation emails
-- Vercel for deployment
+- **Backend** (Optional, depending on the setup):
+  - [Node.js](https://nodejs.org/): For backend server logic.
+  - [Express.js](https://expressjs.com/): A fast, unopinionated, minimalist web framework.
+  - [MySQL](https://www.mysql.com/): Database to persist user information and transactions.
 
 ## Installation
-To run this project locally, follow these steps:
 
-1. **Clone the repository:**
+To run the PulsePay website locally, follow these steps:
 
-```
-git clone https://github.com/malhaouit/Online_Event_Finder.git
-cd Online_Event_Finder
-```
+1. **Clone the repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/pulsepay.git
+   cd pulsepay
+
 
 2. **Install dependencies:**  
 For the backend:  
 
 ```
-cd backend
+cd Backend
 npm install
 ```  
 
@@ -89,7 +77,6 @@ MONGO_URI=<your-mongodb-uri>
 JWT_SECRET=<your-jwt-secret>
 EMAIL_USER=<your-sender-email>
 SENDGRID_API_KEY=<your-sendgrid-api-key>
-BASE_URL=http://localhost:7999/
 FRONTEND_URL=http://localhost:5173
 JWT_RESET_SECRET=<your-jwt-reset-secret>
 GOOGLE_CLIENT_ID=<your-google-client-id>
@@ -128,8 +115,31 @@ npm run dev
 ## Future Improvements
 - **Notifications:** Implement email or in-app notifications for event updates.
 - **Mobile Responsiveness:** Improve the mobile design and ensure a seamless experience on smaller devices.
-- **Event Categories:** Complete categories to help users filter events by type (e.g., sports, music, education).
-- **Event Recommendations:** Use machine learning to recommend events based on user preferences.
-- **Payment integration:** Integration with Stripe/PayPal for processing payments securely. 
+
+## Contributing
+Contributions are welcome! If you would like to improve or add new features to the app, please follow these steps:
+
+1. Fork the repository.
+2. Create a new feature branch (git checkout -b feature/your-feature).
+3. Commit your changes (git commit -m 'Add your feature').
+4. Push to the branch (git push origin feature/your-feature).
+5. Open a pull request for review.
 
 ## License
+This project is licensed under the MIT License. See the [LICENSE](https://opensource.org/license/mit) file for details.
+
+## Contact
+For any inquiries or support, please contact:
+
+1. Jedidia Nkunzumwami
+didiernkunzumwami@gmail.com
+
+2. Fatai Victor
+igomigofatai@gmail.com
+
+## Contributors
+1. Jedidia Nkunzumwami
+didiernkunzumwami@gmail.com
+
+2. Fatai Victor
+igomigofatai@gmail.com
