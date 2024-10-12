@@ -1,18 +1,59 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from './Footer';
 import Navbar from './navBar';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const LogIn: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [rememberMe, setRememberMe] = useState<boolean>(false);
 
+  const displayName = location?.state?.name;
+
   // Form submission handler
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({ email, password, rememberMe });
-    // Add your authentication logic here
+    try {
+      const url = `${import.meta.env.VITE_BACKEND_URL}/api/auth/login`;
+      const response = await axios({
+        method: "post",
+        url: url,
+        data: {
+          name: name,
+          email: email,
+          password: password,
+          rememberMe: rememberMe
+        },
+        withCredentials: true
+      });
+
+      toast.success(response?.data?.message);
+
+      if (response.data.status) {
+        localStorage.setItem("pulsePaytoken", response?.data?.token);
+
+        setName("");
+        setEmail("");
+        setPassword("");
+        setRememberMe(false);
+
+        navigate("/");
+      }
+
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        toast.error(error?.response?.data?.message);
+      } else {
+        toast.error("An unexpected error occurred");
+      }
+    }
   };
 
   return (
@@ -22,9 +63,14 @@ const LogIn: React.FC = () => {
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+              {
+                  displayName && (
+                    <h1 className='text-xl font-bold m-0'>{`Welcome, ${displayName}`}</h1>
+                  )
+              }
+            <h3 className="text-xl font-bold text-gray-900 md:text-2xl dark:text-white">
               Log In to your account
-            </h1>
+            </h3>
             <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
               <div>
               <label
