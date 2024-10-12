@@ -9,7 +9,7 @@ const Price: React.FC = () => {
     <div className="pt-20 bg-white text-gray-800 min-h-screen">
       <header className="text-center py-10 bg-gray-50 shadow-sm">
         <h1 className="text-4xl font-bold">Simple, Fair Pricing</h1>
-        <p className="mt-4 text-lg">Paystack only makes money when you do.</p>
+        <p className="mt-4 text-lg">PulsePay only makes money when you do.</p>
       </header>
 
       <section className="container mx-auto py-12">
@@ -56,7 +56,7 @@ const Price: React.FC = () => {
       </section>
 
       <footer className="text-center py-8 bg-gray-100 mt-16">
-        <p>Ready to get started? <a href="https://paystack.com/signup" className="text-blue-600 hover:underline">Create a free account</a> in just 30 minutes.</p>
+        <p>Ready to get started? <a href="/SignUp" className="text-blue-600 hover:underline">Create a free account</a> in just 30 minutes.</p>
       </footer>
     </div>
     <Footer />

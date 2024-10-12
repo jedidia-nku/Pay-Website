@@ -1,3 +1,5 @@
+import arrow_forward from '../../public/arrow_forward.png'
+// import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 const Footer: React.FC = () => {
     return (
@@ -34,15 +36,19 @@ const Footer: React.FC = () => {
           {/* Products Links */}
           <div className=" flex justify-around">
           <div>
-            <h4 className="text-lg font-bold mb-4">Our Products</h4>
+            <h4 className="text-lg font-bold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">SawaPay Payroll</a></li>
-              <li><a href="#" className="hover:underline">SawaPay Finance</a></li>
+              <li><a href="#" className="hover:underline">Money Transfer</a></li>
+              <li><a href="#" className="hover:underline">Reload Forex Card</a></li>
+              <li><a href="#" className="hover:underline">Buy Foreign Currencies</a></li>
+              <li><a href="#" className="hover:underline">Sell Foreign Currencies</a></li>
+              <li><a href="#" className="hover:underline">Electricity Bill</a></li>
+              <li><a href="#" className="hover:underline">Internet Bill</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-4">SawaPay</h4>
+            <h4 className="text-lg font-bold mb-4">PulsePay</h4>
             <ul className="space-y-2">
               <li><a href="#" className="hover:underline">Our story</a></li>
               <li><a href="#" className="hover:underline">Our team</a></li>
