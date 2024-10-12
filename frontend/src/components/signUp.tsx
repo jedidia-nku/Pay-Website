@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const SignIn: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
-  const [name, setName] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
   const [rememberMe, setRememberMe] = useState<boolean>(false);

@@ -3,10 +3,10 @@ const User = require("../../models/user");
 const bcrypt = require("bcrypt");
 
 const register = async (req, res) => {
-    const { name, email, password, profile_pic } = req.body;
+    const { name, email, password, confirmPassword, rememberMe, profile_pic } = req.body;
     try {
         // Validate the request body data
-        if (!name || !email || !password) {
+        if (!name || !email || !password || !confirmPassword) {
             return res.status(400).json({
                 error: true,
                 message: "Invalid or missing credentials"
@@ -25,11 +25,16 @@ const register = async (req, res) => {
         // Hash the password before storing
         const hashedPwd = await bcrypt.hash(password, 10);
 
+        // Hash the confirmPassword as well
+        const confirmPwdHash = await bcrypt.hash(confirmPassword, 10);
+
         // Register the user to the platform
         const newUser = new User({
             name,
             email,
             password: hashedPwd,
+            confirmPassword: confirmPwdHash,
+            rememberMe,
             profile_pic
         });
         await newUser.save();

@@ -18,9 +18,17 @@ const UserSchema = new Schema({
         type: String,
         required: [true, "Provide your password please"]
     },
+    confirmPassword: {
+        type: String,
+        required: [true, "Confirm your password please"]
+    },
     profile_pic: {
         type: String,
         default: ""
+    },
+    rememberMe: {
+        type: Boolean,
+        defualt: false
     }
 }, {
     timestamps: true
