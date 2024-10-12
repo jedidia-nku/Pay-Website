@@ -89,12 +89,14 @@ const LogIn: React.FC = () => {
                   Forgot password?
                 </a>
               </div>
-              <button
-                type="submit"
-                className="w-full text-white ml-2 bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-2 py-1 text-center dark:bg-primary-600  dark:focus:ring-primary-800"
-              >
-                LogIn
-              </button>
+              <div className='flex justify-center'>
+                <button
+                  type="submit"
+                  className="px-5 py-2 bg-green-600 text-white hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm text-center dark:bg-primary-600  dark:focus:ring-primary-800"
+                >
+                  Login
+                </button>
+              </div>
               <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                 Don’t have an account yet?{' '}
                 <a

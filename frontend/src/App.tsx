@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import Services from "./Pages/services";
 import LogIn from "./components/login";
 import SignIn from "./components/signUp";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/LogIn" element={<LogIn/>} />
         <Route path="/SignUp" element={<SignIn />} />
       </Routes>
+      <Toaster />
     </Router>
   );
 }
